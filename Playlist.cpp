@@ -26,7 +26,7 @@ Playlist::Playlist(string s) {
 //     //  //To test, save and run your code.  If you get a message saying, Done Reading File,  it's
 //     //  //possible your push method works, but you won't know for sure until you complete Step 2
 //     //  //(Below)
-//     readList(s);
+     // readList(s);
 // //
 // //
 // //
@@ -49,8 +49,8 @@ Playlist::Playlist(string s) {
 // //  La Bamba, Richie Valens ................3:29
 // //  Margaritaville, Jimmy Buffett................2:55
 // //  */
-// list->printList();  // uncomment out this line to test your printlist method.
-// cout << endl;
+ // list->printList();  // uncomment out this line to test your printlist method.
+ // cout << endl;
 // // ///*****************************************************************************************/
 // // //  // (5 pts) Step 3:  list->pop();
 // //     //Write the method list->pop();  This method removes the last node from the list
@@ -531,7 +531,6 @@ void Playlist::interface() {
 void Playlist::makeNewList() {
     cout << "Enter the name of the list you wish to enter:" <<endl << flush;
     string newlist = getTitle();
-    //delete list;  (for EC part)
     list = new DLL();
     readList(newlist);
     list->printList();
