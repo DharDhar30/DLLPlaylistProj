@@ -5,7 +5,6 @@
 #include <vector>
 using namespace std;
 
-// Constructor - initializes an empty list
 DLL::DLL() {
     last = nullptr;
     first = nullptr;
@@ -21,7 +20,6 @@ DLL::DLL(string t, string l, int m, int s) {
 
 void DLL::push(string n, string a, int m, int s) {
     DNode *newNode = new DNode(n, a, m, s);
-
     if (first == nullptr) {
         first = newNode;
         last = newNode;
@@ -35,7 +33,6 @@ void DLL::push(string n, string a, int m, int s) {
     numSongs++;
 }
 
-// Print list method
 void DLL::printList() {
     DNode *current = first;
 
@@ -54,7 +51,7 @@ void DLL::printList() {
     }
 }
 
-// Pop method - removes the last node
+
 Song *DLL::pop() {
     if (last == nullptr) {
         return nullptr;
@@ -79,7 +76,7 @@ Song *DLL::pop() {
     return removedSong;
 }
 
-// Remove method
+
 int DLL::remove(string s) {
     DNode *current = first;
     int index = 0;
@@ -128,7 +125,7 @@ int DLL::remove(string s) {
     return -1;
 }
 
-// Move Up method
+
 void DLL::moveUp(string s) {
     if (numSongs <= 1) {
         return;
@@ -163,7 +160,7 @@ void DLL::moveUp(string s) {
     }
 }
 
-// Move Down method
+
 void DLL::moveDown(string s) {
     if (numSongs <= 1) {
         return;
@@ -198,7 +195,7 @@ void DLL::moveDown(string s) {
     }
 }
 
-// List Duration method
+
 void DLL::listDuration(int *tm, int *ts) {
     *tm = 0;
     *ts = 0;
@@ -213,49 +210,40 @@ void DLL::listDuration(int *tm, int *ts) {
     }
 }
 
-// Make Random method
 void DLL::makeRandom() {
     if (numSongs <= 1) {
         return;
     }
 
-    vector<Song*> songVec;
+    for (int i = 0; i < numSongs; i++) {
+        int pos1 = rand() % numSongs;
+        int pos2 = rand() % numSongs;
 
-    DNode *current = first;
+        DNode* node1 = first;
+        DNode* node2 = first;
 
-    while (current != nullptr) {
-        songVec.push_back(current->song);
-        current = current->next;
-    }
+        for (int j = 0; j < pos1; j++) {
+            node1 = node1->next;
+        }
+        for (int j = 0; j < pos2; j++) {
+            node2 = node2->next;
+        }
 
-    for (int i = songVec.size() - 1; i > 0; i--) {
-        int j = rand() % (i + 1);
-
-        Song *temp = songVec[i];
-        songVec[i] = songVec[j];
-        songVec[j] = temp;
-    }
-
-    current = first;
-    int index = 0;
-
-    while (current != nullptr) {
-        current->song = songVec[index];
-        current = current->next;
-        index++;
+        Song* temp = node1->song;
+        node1->song = node2->song;
+        node2->song = temp;
     }
 }
 
-// Destructor
+
+//Destructor extra credit
 DLL::~DLL() {
     DNode *current = first;
-
     while (current != nullptr) {
         DNode *nextNode = current->next;
         delete current;
         current = nextNode;
     }
-
     first = nullptr;
     last = nullptr;
     numSongs = 0;

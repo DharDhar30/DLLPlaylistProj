@@ -16,56 +16,29 @@ Playlist::Playlist() {
 Playlist::Playlist(string s) {
     list = new DLL();
 
-//     //  /*****************************************************************************************/
-//     //  // (5 pts) Step 1:  list->push(title, artist, min, sec);
-//     //  // Write the Push Method in your DLL.cpp.  The push method must include a case for
-//     //  //creating the very first node in the list.
-//     //  // It should take as input a string for the song's title, a string for the artist an int for
-//     //  // the song's minutes in duration, and an int for the song's seconds in duration.  It
-//     //  //returns nothing.
-//     //  //To test, save and run your code.  If you get a message saying, Done Reading File,  it's
-//     //  //possible your push method works, but you won't know for sure until you complete Step 2
-//     //  //(Below)
-     // readList(s);
-// //
-// //
-// //
-// ///*****************************************************************************************/
-// //  //( 6 pts) Step 2: list->printList();
-// //  // write the printList method in the DLL.cpp.  Th printList method should loop through
-// //  //all the nodes in your list and print out the content.
-// //  //Once you have finished writing printList, test it by uncommenting out the list->printlist()
-// //  //call, above.  Below is what your output should look like if you've done this successfully.
-// //
-// //  //You should get:
-// //  /* Let it Be, Beatles................3:11
-// //  Rock Around The Clock, Bill Haley................3:59
-// //  Don't Be Cruel, Elvis Presley ................4:43
-// //  Blueberry Hill, Fats Domino................4:58
-// //  Great Balls of Fire, Jerry Lee Lewis................1:O7
-// //  Jonny B Good, Chuck Berry................3:14
-// //  Bad Moon Rising, Credence Clearwater Revival................6:O9
-// //  Black Magic Woman, Santana................3:16
-// //  La Bamba, Richie Valens ................3:29
-// //  Margaritaville, Jimmy Buffett................2:55
-// //  */
- // list->printList();  // uncomment out this line to test your printlist method.
- // cout << endl;
-// // ///*****************************************************************************************/
-// // //  // (5 pts) Step 3:  list->pop();
-// //     //Write the method list->pop();  This method removes the last node from the list
-// // //  // and returns the Song object (aka the data in the last node).
-// // //  // NOTE:  THIS METHOD SHOULD NOT TRAVERSE THE ENTIRE LIST!!!!
+// //     //  /*****************************************************************************************/
+// //     //  // (5 pts) Step 1:  list->push(title, artist, min, sec);
+// //     //  // Write the Push Method in your DLL.cpp.  The push method must include a case for
+// //     //  //creating the very first node in the list.
+// //     //  // It should take as input a string for the song's title, a string for the artist an int for
+// //     //  // the song's minutes in duration, and an int for the song's seconds in duration.  It
+// //     //  //returns nothing.
+// //     //  //To test, save and run your code.  If you get a message saying, Done Reading File,  it's
+// //     //  //possible your push method works, but you won't know for sure until you complete Step 2
+// //     //  //(Below)
+//      readList(s);
 // // //
-// // //  //When written, uncomment out the code below.
-// list->pop();
-// list->printList();
-// list->pop();
-// list->printList();
-// //
-// //
-// // //  // YOu should get:
-// // //  /*Let it Be, Beatles................3:11
+// // //
+// // //
+// // ///*****************************************************************************************/
+// // //  //( 6 pts) Step 2: list->printList();
+// // //  // write the printList method in the DLL.cpp.  Th printList method should loop through
+// // //  //all the nodes in your list and print out the content.
+// // //  //Once you have finished writing printList, test it by uncommenting out the list->printlist()
+// // //  //call, above.  Below is what your output should look like if you've done this successfully.
+// // //
+// // //  //You should get:
+// // //  /* Let it Be, Beatles................3:11
 // // //  Rock Around The Clock, Bill Haley................3:59
 // // //  Don't Be Cruel, Elvis Presley ................4:43
 // // //  Blueberry Hill, Fats Domino................4:58
@@ -74,27 +47,54 @@ Playlist::Playlist(string s) {
 // // //  Bad Moon Rising, Credence Clearwater Revival................6:O9
 // // //  Black Magic Woman, Santana................3:16
 // // //  La Bamba, Richie Valens ................3:29
-// // //
-// // //  Let it Be, Beatles................3:11
-// // //  Rock Around The Clock, Bill Haley................3:59
-// // //  Don't Be Cruel, Elvis Presley ................4:43
-// // //  Blueberry Hill, Fats Domino................4:58
-// // //  Great Balls of Fire, Jerry Lee Lewis................1:O7
-// // //  Jonny B Good, Chuck Berry................3:14
-// // //  Bad Moon Rising, Credence Clearwater Revival................6:O9
-// // //  Black Magic Woman, Santana................3:16
+// // //  Margaritaville, Jimmy Buffett................2:55
 // // //  */
+//  list->printList();  // uncomment out this line to test your printlist method.
+//  cout << endl;
+// // // ///*****************************************************************************************/
+// // // //  // (5 pts) Step 3:  list->pop();
+// // //     //Write the method list->pop();  This method removes the last node from the list
+// // // //  // and returns the Song object (aka the data in the last node).
+// // // //  // NOTE:  THIS METHOD SHOULD NOT TRAVERSE THE ENTIRE LIST!!!!
+// // // //
+// // // //  //When written, uncomment out the code below.
+// list->pop();
+// list->printList();
+// list->pop();
+// list->printList();
 // // //
-//   cout << endl;
-// // ///*****************************************************************************************/
-// // //  /*(10 pts) Step 4:  Write the method list->remove(title);
-// // //   * This Method goes through your list, finds a title, and removes that node from the list.  It
-// // //   * must work for the first node and the last node, as well as any node in  the list.
-// // //   * To Test:  Uncomment out the code below:
-// // //   *
-// // //   *
-// // //   *
-// // //   */
+// // //
+// // // //  // YOu should get:
+// // // //  /*Let it Be, Beatles................3:11
+// // // //  Rock Around The Clock, Bill Haley................3:59
+// // // //  Don't Be Cruel, Elvis Presley ................4:43
+// // // //  Blueberry Hill, Fats Domino................4:58
+// // // //  Great Balls of Fire, Jerry Lee Lewis................1:O7
+// // // //  Jonny B Good, Chuck Berry................3:14
+// // // //  Bad Moon Rising, Credence Clearwater Revival................6:O9
+// // // //  Black Magic Woman, Santana................3:16
+// // // //  La Bamba, Richie Valens ................3:29
+// // // //
+// // // //  Let it Be, Beatles................3:11
+// // // //  Rock Around The Clock, Bill Haley................3:59
+// // // //  Don't Be Cruel, Elvis Presley ................4:43
+// // // //  Blueberry Hill, Fats Domino................4:58
+// // // //  Great Balls of Fire, Jerry Lee Lewis................1:O7
+// // // //  Jonny B Good, Chuck Berry................3:14
+// // // //  Bad Moon Rising, Credence Clearwater Revival................6:O9
+// // // //  Black Magic Woman, Santana................3:16
+// // // //  */
+// // // //
+//    cout << endl;
+// // // ///*****************************************************************************************/
+// // // //  /*(10 pts) Step 4:  Write the method list->remove(title);
+// // // //   * This Method goes through your list, finds a title, and removes that node from the list.  It
+// // // //   * must work for the first node and the last node, as well as any node in  the list.
+// // // //   * To Test:  Uncomment out the code below:
+// // // //   *
+// // // //   *
+// // // //   *
+// // // //   */
 // list->remove("Don't Be Cruel");  // removes from middle of list
 // cout << endl;
 // list->printList();
@@ -104,72 +104,72 @@ Playlist::Playlist(string s) {
 // list->remove("Let it Be");  // removes first.
 // cout << endl;
 // list->printList();
-// // //
-// // //
-// // //  /*  You should get:
-// // //   * Removing: Don't Be Cruel, Elvis Presley ................4:43
-// // //
-// // //  Let it Be, Beatles................3:11
-// // //  Rock Around The Clock, Bill Haley................3:59
-// // //  Blueberry Hill, Fats Domino................4:58
-// // //  Great Balls of Fire, Jerry Lee Lewis................1:O7
-// // //  Jonny B Good, Chuck Berry................3:14
-// // //  Bad Moon Rising, Credence Clearwater Revival................6:O9
-// // //  Black Magic Woman, Santana................3:16
-// // //
-// // //  Removing: Black Magic Woman, Santana................3:16
-// // //
-// // //  Let it Be, Beatles................3:11
-// // //  Rock Around The Clock, Bill Haley................3:59
-// // //  Blueberry Hill, Fats Domino................4:58
-// // //  Great Balls of Fire, Jerry Lee Lewis................1:O7
-// // //  Jonny B Good, Chuck Berry................3:14
-// // //  Bad Moon Rising, Credence Clearwater Revival................6:O9
-// // //
-// // //  Removing: Let it Be, Beatles................3:11
-// // //
-// // //  Rock Around The Clock, Bill Haley................3:59
-// // //  Blueberry Hill, Fats Domino................4:58
-// // //  Great Balls of Fire, Jerry Lee Lewis................1:O7
-// // //  Jonny B Good, Chuck Berry................3:14
-// // //  Bad Moon Rising, Credence Clearwater Revival................6:O9
-// // //   */
-// // //
-// // //
-// // ///*****************************************************************************************/
-// // //  /* Step 4.5:  Just uncomment the code below to add the songs back (albeit at the end)
-// // //   * After removing and popping, the list is getting a bit short
-// // //   */
-// // //
+// // // //
+// // // //
+// // // //  /*  You should get:
+// // // //   * Removing: Don't Be Cruel, Elvis Presley ................4:43
+// // // //
+// // // //  Let it Be, Beatles................3:11
+// // // //  Rock Around The Clock, Bill Haley................3:59
+// // // //  Blueberry Hill, Fats Domino................4:58
+// // // //  Great Balls of Fire, Jerry Lee Lewis................1:O7
+// // // //  Jonny B Good, Chuck Berry................3:14
+// // // //  Bad Moon Rising, Credence Clearwater Revival................6:O9
+// // // //  Black Magic Woman, Santana................3:16
+// // // //
+// // // //  Removing: Black Magic Woman, Santana................3:16
+// // // //
+// // // //  Let it Be, Beatles................3:11
+// // // //  Rock Around The Clock, Bill Haley................3:59
+// // // //  Blueberry Hill, Fats Domino................4:58
+// // // //  Great Balls of Fire, Jerry Lee Lewis................1:O7
+// // // //  Jonny B Good, Chuck Berry................3:14
+// // // //  Bad Moon Rising, Credence Clearwater Revival................6:O9
+// // // //
+// // // //  Removing: Let it Be, Beatles................3:11
+// // // //
+// // // //  Rock Around The Clock, Bill Haley................3:59
+// // // //  Blueberry Hill, Fats Domino................4:58
+// // // //  Great Balls of Fire, Jerry Lee Lewis................1:O7
+// // // //  Jonny B Good, Chuck Berry................3:14
+// // // //  Bad Moon Rising, Credence Clearwater Revival................6:O9
+// // // //   */
+// // // //
+// // // //
+// // // ///*****************************************************************************************/
+// // // //  /* Step 4.5:  Just uncomment the code below to add the songs back (albeit at the end)
+// // // //   * After removing and popping, the list is getting a bit short
+// // // //   */
+// // // //
 // list->push("Don't Be Cruel", "Elvis Presley", 4,43);
 // list->push("Black Magic Woman", "Santana", 3,16);
 // list->push("Let it Be", "Beatles", 3, 11);
 // list->printList();
-// // //
-// // //
-// // //  /* Now the list should be:
-// // //   * Rock Around The Clock, Bill Haley................3:59
-// // //     Blueberry Hill, Fats Domino................4:58
-// // //     Great Balls of Fire, Jerry Lee Lewis................1:O7
-// // //     Jonny B Good, Chuck Berry................3:14
-// // //     Bad Moon Rising, Credence Clearwater Revival................6:O9
-// // //     Don't Be Cruel, Elvis Presley................4:43
-// // //     Black Magic Woman, Santana................3:16
-// // //     Let it Be, Beatles................3:11
-// // //   */
-// // //
-// // //
-// // //
-// // //
-// // //
-// // //
-// // ///*****************************************************************************************/
-// // //  /* (10 pts)Step 5:  Write the method moveUp(title).  This method goes through the list, finds
-// // //   * the node with the title, and moves it up one place in the list.  If it is the first
-// // //   * song in the list, it moves it to the end of the list.
-// // //   * Once you have it written, uncomment out the code below:
-// // //   */
-// // //
+// // // //
+// // // //
+// // // //  /* Now the list should be:
+// // // //   * Rock Around The Clock, Bill Haley................3:59
+// // // //     Blueberry Hill, Fats Domino................4:58
+// // // //     Great Balls of Fire, Jerry Lee Lewis................1:O7
+// // // //     Jonny B Good, Chuck Berry................3:14
+// // // //     Bad Moon Rising, Credence Clearwater Revival................6:O9
+// // // //     Don't Be Cruel, Elvis Presley................4:43
+// // // //     Black Magic Woman, Santana................3:16
+// // // //     Let it Be, Beatles................3:11
+// // // //   */
+// // // //
+// // // //
+// // // //
+// // // //
+// // // //
+// // // //
+// // // ///*****************************************************************************************/
+// // // //  /* (10 pts)Step 5:  Write the method moveUp(title).  This method goes through the list, finds
+// // // //   * the node with the title, and moves it up one place in the list.  If it is the first
+// // // //   * song in the list, it moves it to the end of the list.
+// // // //   * Once you have it written, uncomment out the code below:
+// // // //   */
+// // // //
 // cout << "Moving Great Balls of Fire  up one" << endl << endl;
 // list->moveUp("Great Balls of Fire");
 // list->printList();
@@ -179,61 +179,61 @@ Playlist::Playlist(string s) {
 // cout << "Moving Great Balls of Fire  up one" << endl<< endl;
 // list->moveUp("Great Balls of Fire");
 // list->printList();
-// // //
-// // //
-// // //  /* YOur output should be:
-// // //   * Moving Great Balls of Fire  up one
-// // //
-// // //  Rock Around The Clock, Bill Haley................3:59
-// // //  Great Balls of Fire, Jerry Lee Lewis................1:O7
-// // //  Blueberry Hill, Fats Domino................4:58
-// // //  Jonny B Good, Chuck Berry................3:14
-// // //  Bad Moon Rising, Credence Clearwater Revival................6:O9
-// // //  Don't Be Cruel, Elvis Presley................4:43
-// // //  Black Magic Woman, Santana................3:16
-// // //  Let it Be, Beatles................3:11
-// // //
-// // //  Moving Great Balls of Fire  up one
-// // //
-// // //  Great Balls of Fire, Jerry Lee Lewis................1:O7
-// // //  Rock Around The Clock, Bill Haley................3:59
-// // //  Blueberry Hill, Fats Domino................4:58
-// // //  Jonny B Good, Chuck Berry................3:14
-// // //  Bad Moon Rising, Credence Clearwater Revival................6:O9
-// // //  Don't Be Cruel, Elvis Presley................4:43
-// // //  Black Magic Woman, Santana................3:16
-// // //  Let it Be, Beatles................3:11
-// // //
-// // //  Moving Great Balls of Fire  up one
-// // //
-// // //  Rock Around The Clock, Bill Haley................3:59
-// // //  Blueberry Hill, Fats Domino................4:58
-// // //  Jonny B Good, Chuck Berry................3:14
-// // //  Bad Moon Rising, Credence Clearwater Revival................6:O9
-// // //  Don't Be Cruel, Elvis Presley................4:43
-// // //  Black Magic Woman, Santana................3:16
-// // //  Let it Be, Beatles................3:11
-// // //  Great Balls of Fire, Jerry Lee Lewis................1:O7
-// // //  */
-// // //
-// // //
-// // //
-// // //
-// // //
-// // //
-// // //
-// // //
-// // //
-// // //
-// // //
-// // //  /*****************************************************************************************/
-// // //
-// // //  /* (10 pts) Step 6:  Write the method moveDown(title).  This method goes through the list, finds
-// // //   * the node with the title, and moves it down one place in the list.  If it is the last
-// // //   * song in the list, it moves it to the front of the list.
-// // //   * Once you have it written, uncomment out the code below:
-// // //   */
-// // //
+// // // //
+// // // //
+// // // //  /* YOur output should be:
+// // // //   * Moving Great Balls of Fire  up one
+// // // //
+// // // //  Rock Around The Clock, Bill Haley................3:59
+// // // //  Great Balls of Fire, Jerry Lee Lewis................1:O7
+// // // //  Blueberry Hill, Fats Domino................4:58
+// // // //  Jonny B Good, Chuck Berry................3:14
+// // // //  Bad Moon Rising, Credence Clearwater Revival................6:O9
+// // // //  Don't Be Cruel, Elvis Presley................4:43
+// // // //  Black Magic Woman, Santana................3:16
+// // // //  Let it Be, Beatles................3:11
+// // // //
+// // // //  Moving Great Balls of Fire  up one
+// // // //
+// // // //  Great Balls of Fire, Jerry Lee Lewis................1:O7
+// // // //  Rock Around The Clock, Bill Haley................3:59
+// // // //  Blueberry Hill, Fats Domino................4:58
+// // // //  Jonny B Good, Chuck Berry................3:14
+// // // //  Bad Moon Rising, Credence Clearwater Revival................6:O9
+// // // //  Don't Be Cruel, Elvis Presley................4:43
+// // // //  Black Magic Woman, Santana................3:16
+// // // //  Let it Be, Beatles................3:11
+// // // //
+// // // //  Moving Great Balls of Fire  up one
+// // // //
+// // // //  Rock Around The Clock, Bill Haley................3:59
+// // // //  Blueberry Hill, Fats Domino................4:58
+// // // //  Jonny B Good, Chuck Berry................3:14
+// // // //  Bad Moon Rising, Credence Clearwater Revival................6:O9
+// // // //  Don't Be Cruel, Elvis Presley................4:43
+// // // //  Black Magic Woman, Santana................3:16
+// // // //  Let it Be, Beatles................3:11
+// // // //  Great Balls of Fire, Jerry Lee Lewis................1:O7
+// // // //  */
+// // // //
+// // // //
+// // // //
+// // // //
+// // // //
+// // // //
+// // // //
+// // // //
+// // // //
+// // // //
+// // // //
+// // // //  /*****************************************************************************************/
+// // // //
+// // // //  /* (10 pts) Step 6:  Write the method moveDown(title).  This method goes through the list, finds
+// // // //   * the node with the title, and moves it down one place in the list.  If it is the last
+// // // //   * song in the list, it moves it to the front of the list.
+// // // //   * Once you have it written, uncomment out the code below:
+// // // //   */
+// // // //
 // cout << "Moving Black Magic Woman  down one" << endl << endl;
 // list->moveDown("Black Magic Woman");
 // list->printList();
@@ -243,62 +243,62 @@ Playlist::Playlist(string s) {
 // cout << "Moving Black Magic Woman  down one" << endl<< endl;
 // list->moveDown("Black Magic Woman");
 // list->printList();
-// // //
-// // //  /* YOur output should be:
-// // //   * Moving Black Magic Woman  down one
-// // //
-// // //     Rock Around The Clock, Bill Haley................3:59
-// // //     Blueberry Hill, Fats Domino................4:58
-// // //     Jonny B Good, Chuck Berry................3:14
-// // //     Bad Moon Rising, Credence Clearwater Revival................6:O9
-// // //     Don't Be Cruel, Elvis Presley................4:43
-// // //     Let it Be, Beatles................3:11
-// // //     Black Magic Woman, Santana................3:16
-// // //     Great Balls of Fire, Jerry Lee Lewis................1:O7
-// // //
-// // //     Moving Black Magic Woman  down one
-// // //
-// // //     Rock Around The Clock, Bill Haley................3:59
-// // //     Blueberry Hill, Fats Domino................4:58
-// // //     Jonny B Good, Chuck Berry................3:14
-// // //     Bad Moon Rising, Credence Clearwater Revival................6:O9
-// // //     Don't Be Cruel, Elvis Presley................4:43
-// // //     Let it Be, Beatles................3:11
-// // //     Great Balls of Fire, Jerry Lee Lewis................1:O7
-// // //     Black Magic Woman, Santana................3:16
-// // //
-// // //     Moving Black Magic Woman  down one
-// // //
-// // //     Black Magic Woman, Santana................3:16
-// // //     Rock Around The Clock, Bill Haley................3:59
-// // //     Blueberry Hill, Fats Domino................4:58
-// // //     Jonny B Good, Chuck Berry................3:14
-// // //     Bad Moon Rising, Credence Clearwater Revival................6:O9
-// // //     Don't Be Cruel, Elvis Presley................4:43
-// // //     Let it Be, Beatles................3:11
-// // //     Great Balls of Fire, Jerry Lee Lewis................1:O7
-// // //   *
-// // //   */
-// // //
-// // //
-// // //
-// // //
-// // //
-// // //
-// // //
-// // ///*****************************************************************************************/
-// // //
-// // //  /* (7 pts) Step 7:  Write the method listDuration(int *tm, int *ts)
-// // //   * Note that this method takes as input two pointers to integers.  It is using call by
-// // //   * pointer (largely so you get to practice call by pointer).  The method sums the minutes
-// // //   * and the seconds of each song in the playlist to determine the total number of minutes and
-// // //   * seconds.  It retursn nothing (void) but the input parameters are modified to hold these
-// // //   * totals.
-// // //   *
-// // //   * Once you have it written, uncomment out the code below:
-// // //   */
-// // //
-// // //
+// // // //
+// // // //  /* YOur output should be:
+// // // //   * Moving Black Magic Woman  down one
+// // // //
+// // // //     Rock Around The Clock, Bill Haley................3:59
+// // // //     Blueberry Hill, Fats Domino................4:58
+// // // //     Jonny B Good, Chuck Berry................3:14
+// // // //     Bad Moon Rising, Credence Clearwater Revival................6:O9
+// // // //     Don't Be Cruel, Elvis Presley................4:43
+// // // //     Let it Be, Beatles................3:11
+// // // //     Black Magic Woman, Santana................3:16
+// // // //     Great Balls of Fire, Jerry Lee Lewis................1:O7
+// // // //
+// // // //     Moving Black Magic Woman  down one
+// // // //
+// // // //     Rock Around The Clock, Bill Haley................3:59
+// // // //     Blueberry Hill, Fats Domino................4:58
+// // // //     Jonny B Good, Chuck Berry................3:14
+// // // //     Bad Moon Rising, Credence Clearwater Revival................6:O9
+// // // //     Don't Be Cruel, Elvis Presley................4:43
+// // // //     Let it Be, Beatles................3:11
+// // // //     Great Balls of Fire, Jerry Lee Lewis................1:O7
+// // // //     Black Magic Woman, Santana................3:16
+// // // //
+// // // //     Moving Black Magic Woman  down one
+// // // //
+// // // //     Black Magic Woman, Santana................3:16
+// // // //     Rock Around The Clock, Bill Haley................3:59
+// // // //     Blueberry Hill, Fats Domino................4:58
+// // // //     Jonny B Good, Chuck Berry................3:14
+// // // //     Bad Moon Rising, Credence Clearwater Revival................6:O9
+// // // //     Don't Be Cruel, Elvis Presley................4:43
+// // // //     Let it Be, Beatles................3:11
+// // // //     Great Balls of Fire, Jerry Lee Lewis................1:O7
+// // // //   *
+// // // //   */
+// // // //
+// // // //
+// // // //
+// // // //
+// // // //
+// // // //
+// // // //
+// // // ///*****************************************************************************************/
+// // // //
+// // // //  /* (7 pts) Step 7:  Write the method listDuration(int *tm, int *ts)
+// // // //   * Note that this method takes as input two pointers to integers.  It is using call by
+// // // //   * pointer (largely so you get to practice call by pointer).  The method sums the minutes
+// // // //   * and the seconds of each song in the playlist to determine the total number of minutes and
+// // // //   * seconds.  It retursn nothing (void) but the input parameters are modified to hold these
+// // // //   * totals.
+// // // //   *
+// // // //   * Once you have it written, uncomment out the code below:
+// // // //   */
+// // // //
+// // // //
 // list->printList();
 // int mintot = 0;
 // int sectot = 0;
@@ -315,79 +315,79 @@ Playlist::Playlist(string s) {
 // cout<< mintot<<":";
 // sectot<10?cout<<"0"<<sectot:cout<<sectot;
 // cout << endl<<flush;
-// // //
-// // //
-// // //
-// // //  /* YOur output should be:
-// // //   *
-// // //   * Black Magic Woman, Santana................3:16
-// // //     Rock Around The Clock, Bill Haley................3:59
-// // //     Blueberry Hill, Fats Domino................4:58
-// // //     Jonny B Good, Chuck Berry................3:14
-// // //     Bad Moon Rising, Credence Clearwater Revival................6:O9
-// // //     Don't Be Cruel, Elvis Presley................4:43
-// // //     Let it Be, Beatles................3:11
-// // //     Great Balls of Fire, Jerry Lee Lewis................1:O7
-// // //
-// // //     The total playlist time is  30:37
-// // //   *
-// // //   */
-// // //
-// // //
-// // //
-// // //
-// // //
-// // //
-// // ///*****************************************************************************************/
-// // //
-// // //  /* (20 pts) Step 8:  Write the method makeRandom()
-// // //   * There are many, many ways to write this method, and each is fine (unless it doesn't result
-// // //   * in a random list.
-// // //   * The method should randomly rearrange your play list so that the nodes are reordered in a new,
-// // //   * random order.
-// // //   *
-// // //   * Once you have it written, uncomment out the code below:
-// // //   */
-// // //
-// // //
-//    list->makeRandom();
-//    list->printList();
-//    cout << "***************" << endl;
-//    list->makeRandom();
-//    list->printList();
-// // //
-// // //
-// // //
-// // //  /* YOur output might be something like this (note - yours will be different because it's RANDOM!):
-// // //   *
-// // //     Let it Be, Beatles................3:11
-// // //     Great Balls of Fire, Jerry Lee Lewis................1:O7
-// // //     Blueberry Hill, Fats Domino................4:58
-// // //     Jonny B Good, Chuck Berry................3:14
-// // //     Bad Moon Rising, Credence Clearwater Revival................6:O9
-// // //     Black Magic Woman, Santana................3:16
-// // //     Rock Around The Clock, Bill Haley................3:59
-// // //     Don't Be Cruel, Elvis Presley................4:43
-// // //
-// // //     ***************
-// // //     Black Magic Woman, Santana................3:16
-// // //     Don't Be Cruel, Elvis Presley................4:43
-// // //     Blueberry Hill, Fats Domino................4:58
-// // //     Let it Be, Beatles................3:11
-// // //     Rock Around The Clock, Bill Haley................3:59
-// // //     Bad Moon Rising, Credence Clearwater Revival................6:O9
-// // //     Great Balls of Fire, Jerry Lee Lewis................1:O7
-// // //     Jonny B Good, Chuck Berry................3:14
-// // //
-// // //   *
-// // //   */
-// // //
-// // //
-// // //
-// // //
-// // //
-// // //
-// // ///*****************************************************************************************/
+// // // //
+// // // //
+// // // //
+// // // //  /* YOur output should be:
+// // // //   *
+// // // //   * Black Magic Woman, Santana................3:16
+// // // //     Rock Around The Clock, Bill Haley................3:59
+// // // //     Blueberry Hill, Fats Domino................4:58
+// // // //     Jonny B Good, Chuck Berry................3:14
+// // // //     Bad Moon Rising, Credence Clearwater Revival................6:O9
+// // // //     Don't Be Cruel, Elvis Presley................4:43
+// // // //     Let it Be, Beatles................3:11
+// // // //     Great Balls of Fire, Jerry Lee Lewis................1:O7
+// // // //
+// // // //     The total playlist time is  30:37
+// // // //   *
+// // // //   */
+// // // //
+// // // //
+// // // //
+// // // //
+// // // //
+// // // //
+// // // ///*****************************************************************************************/
+// // // //
+// // // //  /* (20 pts) Step 8:  Write the method makeRandom()
+// // // //   * There are many, many ways to write this method, and each is fine (unless it doesn't result
+// // // //   * in a random list.
+// // // //   * The method should randomly rearrange your play list so that the nodes are reordered in a new,
+// // // //   * random order.
+// // // //   *
+// // // //   * Once you have it written, uncomment out the code below:
+// // // //   */
+// // // //
+// // // //
+//     list->makeRandom();
+//     list->printList();
+//     cout << "***************" << endl;
+//     list->makeRandom();
+//     list->printList();
+// // // //
+// // // //
+// // // //
+// // // //  /* YOur output might be something like this (note - yours will be different because it's RANDOM!):
+// // // //   *
+// // // //     Let it Be, Beatles................3:11
+// // // //     Great Balls of Fire, Jerry Lee Lewis................1:O7
+// // // //     Blueberry Hill, Fats Domino................4:58
+// // // //     Jonny B Good, Chuck Berry................3:14
+// // // //     Bad Moon Rising, Credence Clearwater Revival................6:O9
+// // // //     Black Magic Woman, Santana................3:16
+// // // //     Rock Around The Clock, Bill Haley................3:59
+// // // //     Don't Be Cruel, Elvis Presley................4:43
+// // // //
+// // // //     ***************
+// // // //     Black Magic Woman, Santana................3:16
+// // // //     Don't Be Cruel, Elvis Presley................4:43
+// // // //     Blueberry Hill, Fats Domino................4:58
+// // // //     Let it Be, Beatles................3:11
+// // // //     Rock Around The Clock, Bill Haley................3:59
+// // // //     Bad Moon Rising, Credence Clearwater Revival................6:O9
+// // // //     Great Balls of Fire, Jerry Lee Lewis................1:O7
+// // // //     Jonny B Good, Chuck Berry................3:14
+// // // //
+// // // //   *
+// // // //   */
+// // // //
+// // // //
+// // // //
+// // // //
+// // // //
+// // // //
+// // // ///*****************************************************************************************/
 // // //
 // // //  /* (EC part) Step 9:  Write the destructor for the list.  This should remove all the nodes in the list
 // // //   * from the heap.  This will allow us to create a new list.
@@ -480,7 +480,7 @@ Playlist::Playlist(string s) {
 // //
 // //
 // //  /* Your output should go here */
-    readList(s);
+    //readList(s);
 }
 
 void Playlist::interface() {
